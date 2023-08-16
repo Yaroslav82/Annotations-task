@@ -14,7 +14,7 @@ public class ProductHandler {
         getAnnot(method);
     }
 
-    static void getAnnot(AnnotatedElement element) {
+    private static void getAnnot(AnnotatedElement element) {
         try  {
 
             Annotation[] annotations = element.getAnnotations();
