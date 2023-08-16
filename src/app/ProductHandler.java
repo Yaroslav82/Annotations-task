@@ -15,18 +15,16 @@ public class ProductHandler {
     }
 
     static void getAnnot(AnnotatedElement element) {
-
         try  {
 
             Annotation[] annotations = element.getAnnotations();
 
             for (Annotation annotation : annotations) {
                 if (annotation instanceof Product product) {
-                    System.out.printf("Product: %s, quota: %d%n",
-                            );
+                    System.out.printf("Product: %s, quota: %d%n", product.name(), product.quota());
                 }
             }
-        } catch (Exception e) {
+        } catch (Exception ignored) {
 
         }
     }
