@@ -6,11 +6,11 @@ import java.lang.reflect.Method;
 
 public class ProductHandler {
 
-    public static void main(String[] args) throws  {
+    public static void main(String[] args) throws NoSuchMethodException {
         new ProductInfo();
-        Class<ProductInfo> infoClass = .class;
+        Class<ProductInfo> infoClass = ProductInfo.class;
         getAnnot(infoClass);
-        Method method = infoClass.getMethod();
+        Method method = infoClass.getMethod("getData");
         getAnnot(method);
     }
 
